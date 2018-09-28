@@ -1,0 +1,42 @@
+h3.numbered {
+  counter-reset: mynum;
+}
+
+h3 {
+  border-top: 1px solid gray;
+  counter-reset: num;
+}
+
+h3:before {
+  content: "(" counter(num, upper-latin) ") ";
+  counter-increment: num;
+}
+
+#numbered p:before {
+  content: counter(mynum) ": ";
+  counter-increment: mynum;
+  font-weight: bold;
+}
+
+ul#roman, #numbered {
+  border: 10px solid lightblue;
+  padding-right: 0.5em;
+  float: left;
+}
+
+ul#roman li {
+  list-style-type: lower-roman;
+  margin-bottom: 8px;
+}
+
+/* #pin {
+  position: relative;
+} */
+
+img#fixed-pin {
+  float: right;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+}
