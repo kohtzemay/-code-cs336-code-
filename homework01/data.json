@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Keith",
+    "lastName": "VanderLinden",
+    "loginID": "kvlinden",
+    "startDate": "1987/09/29"
+  },
+  {
+    "firstName": "Joel",
+    "lastName": "Adams",
+    "loginID": "jadams",
+    "startDate": "1990/09/30"
+  },
+  {
+    "firstName": "Harry",
+    "lastName": "Plantinga",
+    "loginID": "hplantinga",
+    "startDate": "1984/09/30"
+  },
+  {
+    "firstName": "Patrick",
+    "lastName": "Bailey",
+    "loginID": "pbailey",
+    "startDate": "2000/09/30"
+  },
+  {
+    "firstName": "Victor",
+    "lastName": "Norman",
+    "loginID": "vnorman",
+    "startDate": "2000/09/30"
+  }
+]
