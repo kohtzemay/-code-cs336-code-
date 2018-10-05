@@ -1,0 +1,72 @@
+// creating a variables to reduce the amount of repetitive typing
+border = 3px solid #000000
+common-bg = #ccccff
+
+body
+      font: 25px Helvetica
+      background: #999999
+
+    // #main is nested under body but will appear as a DRY style in CSS
+    #main
+        min-height: 800px
+        margin: 0px
+        padding: 0px
+        display: flex
+        flex-flow: row
+        border-top: border
+        border-bottom: border
+
+        article
+            padding: 40px
+            border-left: border
+            border-right: border
+            background: #dddd88
+            flex: 3 1 60%
+            order: 2
+
+        nav
+            padding: 40px
+            background: common-bg
+            flex: 1 6 20%
+            order: 1
+            text-align: right
+
+        aside
+            padding: 40px
+            background: common-bg
+            flex: 1 6 20%
+            order: 3
+
+    header, footer
+        display: block
+        padding: 5px 20px
+        min-height: 100px
+        background: #ffeebb
+        display: flex
+        align-items: center
+
+    h1
+      font-size: 30px
+
+    footer
+      font-size: 14px
+
+    /* Too narrow to support three columns */
+    @media all and (max-width: 640px)
+        #main, #page
+            flex-direction: column
+
+        #main
+            article, nav, aside
+            /* Return them to document order */
+                order: 0
+                text-align: left
+
+            article
+                border: 0px
+                border-top: border
+                border-bottom: border
+
+            nav, aside, header, footer
+                min-height: 100px
+                max-height: 100px
