@@ -1,0 +1,12 @@
+(a) I could only test the GET method with Chrome Developer Tools, because the default REST method when you visit a webpage will always be GET,
+    unless you hit a button that fires a different method (e.g. a POST method when hitting "Submit" for a form). With cURL, however, I was able
+    to test POST, PUT, and DELETE, as it allowed me to specify which method I wanted to use in the command line. Technically, I could test the
+    GET method, but it didn't return any data.
+
+    The commands I used were:
+      - $ curl -X POST localhost:3000/request -d '{"arg":"Hello"}' -H 'Content-Type: application/json'
+      - $ curl -X PUT localhost:3000/request -d '{"arg":"Hi"}' -H 'Content-Type: application/json'
+      - $ curl -X DELETE localhost:3000/request -d '{"arg":"Hello"}' -H 'Content-Type: application/json'
+
+
+(b) 404, or "Not Found."
