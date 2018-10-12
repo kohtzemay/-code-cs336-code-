@@ -1,3 +1,4 @@
+Exercise 6.1
 (a) I could only test the GET method with Chrome Developer Tools, because the default REST method when you visit a webpage will always be GET,
     unless you hit a button that fires a different method (e.g. a POST method when hitting "Submit" for a form). With cURL, however, I was able
     to test POST, PUT, and DELETE, as it allowed me to specify which method I wanted to use in the command line. Technically, I could test the
@@ -10,3 +11,11 @@
 
 
 (b) 404, or "Not Found."
+
+Exercise 6.2
+(a) Only GET and POST.
+
+(b) The form data is being passed back to the server from the client in the form of a list of key/value items in the HTTP request.
+The action prop in the <form> tag specifies the endpoint the data is supposed to go to when the "Submit" button is hit, and you can
+configure how you want your server to handle hits to that endpoint. In this case, hitting the endpoint just returned a JSON-parsed
+response back to the client. The data isn't modified when the request is sent, but can be modified in the response that is returned.
