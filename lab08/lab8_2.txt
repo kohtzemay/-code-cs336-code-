@@ -1,0 +1,58 @@
+a. Explain
+  i. This is the component structure of our program:
+     - CommentBox
+       - CommentList
+         - Comment
+     - CommentForm
+
+     <CommentBox /> is the parent component of <CommentList /> and <Comment />, so it encapsulates
+     all the components that are related to it -- in this case, the list of comments. Since <CommentForm />
+     doesn't really relate to a list of comments, but it injects comments into the list, so it is
+     outside of <CommentBox />.
+
+     The use of components is what makes the UI composable -- it is made up of different components
+     instead of all the code being lumped together. These components can also be easily moved around
+     while still maintaining the basic functionality of the program (for example, we can move
+     <CommentForm /> to above <CommentList /> and the program will still run). This matters because
+     it makes it easy for someone to glance at the code and quickly understand the purpose of each
+     component. It also helps the developer think more thoroughly about how they want to structure
+     their program in an efficient manner.
+
+  ii. JSX basically adds XML syntax to JavaScript, allowing us to add names, attributes, and children
+      to these JSX tags.
+
+  iii. When we use <div> tags in React, they're not actually DOM nodes but instants of React div
+       components, so we're not actually generating HTML strings, making React safe against XSS
+       attacks.
+
+
+  iv. First, the <CommentBox /> component is rendered, and since this component contains all the other
+      comment components, they will also be rendered together. Our program makes a call to the
+      "/api/comments" endpoint every 2000ms, GETting back data from that endpoint, which it then stores
+      in a state. This state is passed as a prop (property) to the <CommentList /> component, which in
+      turn passes the prop to <Comment /> and renders the author and the author's comment. Comments
+      are created when the user fills in the form and hits submit, which makes a POST method to the
+      same endpoint. And since our program is making calls every 2000ms, new comments will be loaded in
+      within that time.
+
+  v. Props are immutable while states are mutable. This distinction matters because a component should
+     manage its own state but not its own props. The main purpose of props is to store values/functions
+     from the parent component, while the value of a state can be changed, for example, based on user
+     input.
+
+b. Consider
+  i. When I remove the top comment, the top comment is also removed in the webpage. Since the program
+     is making calls to the "/api/comments" endpoint, which is getting data from comments.json, the
+     webpage will be updated to reflect the removed comment (or any other updates) in 2000ms.
+
+  ii. CommentBox doesn't call render after loading comments from the server, because it sets the
+      comments to a state called data, which it then passes as a prop to CommentList, which actually
+      then renders the list of comments.
+
+  iii. It keeps the program and all the components in it consistent, so there aren't different states
+       of data (which could all be different from each other) being passed around in the program. This
+       also makes it easier to update the program with new data, as you only need to update the parent
+       states.
+
+  iv. The optimism in this app is a little foolish, which is why we should always aim to have error-
+      handling in our apps, for e.g. to render components even if there is an error from the endpoint. 
