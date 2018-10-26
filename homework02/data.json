@@ -1,0 +1,68 @@
+[
+    {
+        "firstName": "Joel",
+        "lastName": "Adams",
+        "loginID": "jadams",
+        "startDate": "1990/09/30"
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Plantinga",
+        "loginID": "hplantinga",
+        "startDate": "1984/09/30"
+    },
+    {
+        "firstName": "Patrick",
+        "lastName": "Bailey",
+        "loginID": "pbailey",
+        "startDate": "2000/09/30"
+    },
+    {
+        "firstName": "Kelly",
+        "lastName": "Oh",
+        "loginID": "koh",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Lauren",
+        "lastName": "Ebels",
+        "loginID": "lebels",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Derek",
+        "lastName": "Fisher",
+        "loginID": "dfisher",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Toussaint",
+        "lastName": "Cruise",
+        "loginID": "tcruise",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Kwabena",
+        "lastName": "Boahene ",
+        "loginID": "kboahene",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Sarah",
+        "lastName": "Griffeoun",
+        "loginID": "sgriff",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Sarah",
+        "lastName": "Griffeon",
+        "loginID": "sgriffeon",
+        "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "Arie",
+        "lastName": "Williams",
+        "loginID": "awilliams",
+        "startDate": "2015/09/10"
+    }
+]
