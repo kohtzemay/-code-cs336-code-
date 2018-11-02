@@ -1,0 +1,36 @@
+Exercise 9.1
+
+a. Bundling has basically combined imported files into one file, called a "bundle." It's useful because the bundled file
+   is a lot smaller than the whole app itself, and can be served up on a webpage to load the whole app. The bundle file
+   is only 5.87 KB. Files being loaded in are bundle.js, base.css, react-dom.js, jquery, and remarkable.js.
+
+b. Babel helped convert our "newer" versions of JavaScript into an older browser-friendly version.
+
+c. No, you cannot, because there aren't any HTML elements in index.html; it imports bundle.js in a script tag, but the
+   HTML file itself can't read JavaScript, which is why nothing loads.
+
+d. It grabs all the .jsx files in the project and preprocesses through them, transforming JSX into regular JavaScript.
+
+
+Exercise 9.2
+
+a. bundle.js has increased in size and is now 1.32 GB, because there are more files to bundle since we stopped importing
+   files directly into index.html. index.html also looks a lot cleaner, being only a "bare-bones skeleton," importing
+   only one file, bundle.js.
+
+b. Since Webpack is already configured to import all the external libraries and files, we're not importing the same
+   files twice, which would be counterintuitive. Also, we're importing these files into more "correct" places, since our
+   app
+
+c. Only bundle.js is being loaded, according to the network log. All the new node modules I created have now been bundled
+   into that file, so we don't see them being loaded individually. The same is also true for the CSS file.
+
+Exercise 9.3
+
+a. There isn't really much of a difference between the two ports -- port 3001 is just a development server, meaning that
+   it is meant for testing the app and so isn't meant to be seen by the public. When I edit one of the React modules and
+   save my changes, the :3001 browser automatically refreshes and displays the change. The bundle/index files stay the
+   same. 
+
+b. Loading /api/comments gives me a list of all the comments in JSON. This port doesn't automatically reload to display
+   the changes I made previously.
