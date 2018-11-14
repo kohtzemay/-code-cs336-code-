@@ -1,0 +1,25 @@
+Exercise 11.1
+
+a. The production deployment does a bit more to the code that's deployed than the development version does. For
+   example, it uglifies the code, meaning that it makes the source code pretty much unreadable, which also reduces
+   the app size, since in production the developer shouldn't have to touch the code anymore, assuming that the code
+   has been fully tested for bugs and other issues. On the other hand, the development deployment has the hot
+   reloader which is useful for debugging and making changes to the code for testing.
+
+b. Occurence order: Webpack uses this plugin to optimize the app by prioritizing the modules that get used the most
+   and giving them the smallest ids, so that they are loaded first.
+   Uglification: Uglifies the code and compresses it, reducing the size of the app.
+   Text extraction: This moves all the imported CSS files to a separate CSS output file, so that styles aren't
+   inlined in our JS code
+
+Exercise 11.2
+
+a. Deploying with Heroku provides an actual domain that people can go to and view, so they don't need to have the
+   code downloaded on their machines in order to run the app. Heroku also comes with auto-deployment, so if we
+   enable that then once our code is ready for production, all we would need to do is push it to the production
+   branch and Heroku will handle the rest.
+
+b. Heroku reads the package.json file in order to know how to build our application and create an executable. Then
+   it looks at the main field in our package.json to see what has to be run. And to deploy, Heroku creates a new Git
+   branch that's associated with our Git repository, so when we do a "git push," what Heroku actually does is push
+   to the branch it created. 
