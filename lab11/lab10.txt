@@ -1,0 +1,29 @@
+Exercise 10.1
+
+a. The biggest difference I noticed while using the command line to insert/update/delete documents from
+   a collection in Mongo is that the data is all formatted in JSON, whereas SQL cannot directly read and
+   understand JSON. You also don't need to specify the data type of a column when creating a new collection
+   in Mongo. Something SQL databases can do that Mongo can't is the ability to join tables (or collections)
+   in this case.
+
+b. With the cloud database it'll be easy to access Mongo wherever you are as all you need to do is have a
+   connection to it. So you'll be able to perform CRUD operations just as long as you have  the username
+   and password of a user that has access to the database. There can also be multiple connections to a
+   Mongo database at the same time, which is another advantage but also leads to a disadvantage, since
+   one user may update the data in a collection while another user might be deleting the same data.
+
+c. According to Mongo, sandbox databases do not have redundancies and so cannot be used for production,
+   which means that if this deployment fails, our application won't have a backup database to access. So
+   our application becomes more unstable and may experience more downtime.
+
+Exercise 10.2
+
+a. It was better to use the modified server. Using the Webpack development server would have been useful
+   if we were making changes to the script files, but we were only editing server.js, which the hot
+   reload feature didn't apply to.
+
+b. When I delete/update/add comments those changes appear on the application without me having to reload
+   the page.
+
+c. I feel like SQL would be too complex for this type of application that only needs to store very basic
+   data, so no, I don't think it needs to use an SQL/noSQL database. 

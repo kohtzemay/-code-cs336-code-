@@ -64,5 +64,11 @@
         "lastName": "Williams",
         "loginID": "awilliams",
         "startDate": "2015/09/10"
+    },
+    {
+        "firstName": "James",
+        "lastName": "Buchanan",
+        "loginID": "jbuchanan",
+        "startDate": "1924/08/18"
     }
 ]
