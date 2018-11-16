@@ -14,6 +14,8 @@ app.use(express.static("."));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/', express.static(path.join(__dirname, 'dist')));
+
 // Gets and returns a list of all the people in data.json
 app.get('/people', function (req, res) {
   db.collection('people').find().toArray(function (err, result) {
@@ -125,8 +127,6 @@ app.get('/person/:id/years', function (req, res) {
     }
   );
 })
-
-app.get('/', (req, res) => res.send('Hello World!'));
 
 // Gives a 404 not found status if an unspecified route is hit
 app.get('*', function (req, res) {
