@@ -1,0 +1,25 @@
+Exercise 13.1
+
+a. With React Router we can now have multiple pages in our single-page app, increasing the number
+   of features we are able to add.
+
+b. browserHistory is better; hashHistory includes a "#" in your URL, which is pretty unsightly. Browsers
+   also don't send the # part of the URL in any of the HTTP requests when using hasHistory, so the
+   server wouldn't know what the # in the URL is hen a user is trying to request a page.
+
+c. When using browserHistory, server.js has to be modified to handle the URLs that will be requested
+   by the user, including sending all non-root requests to the specified path (/dist). It will also
+   map the main app to that path.
+
+Exercise 13.2
+
+a. CommentEdit maintains the author and text state, while CommentBox maintains the whole array of
+   comments in the database.
+
+b. When the AJAX PUT and DELETE methods return successfully, CommentEdit goes back to the root route,
+   displaying the updated list of comments. It's not different from what the "Cancel" button does;
+   both returns the user back to the root page.
+
+c. Link is different from a HTML hyperlink in that instead of refreshing the page to go to the
+   desired route, it navigates to the new URL and renders the component of that URL, so the page
+   doesn't have to refresh.
